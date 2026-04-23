@@ -1,21 +1,30 @@
 void main() {
   //Opérateurs
 
-  // Le modulo (%): Il retourne le reste de la division euclidienne
-  var nombre1 = 23;
-  var nombre2 = 3;
+  var a = 10;
+  var b = 5;
+  print(a == b);
+  print(a != b);
 
-  var modulo = nombre1 % nombre2;
-  print(modulo);
+  //les opérateurs logiques
+  //ET logique : && (touche 1)
+  //OU logique : || (AltGr + touche 6)
+  //NON logique : !
 
-  void parite(int nombre) {
-    if (nombre % 2 == 0) {
-      print("Le nombre $nombre est pair");
-    } else {
-      print("Le nombre $nombre est impair");
-    }
-  }
+  bool age = false;
+  bool moyenne = false;
 
-  parite(20);
-  parite(25);
+  //ET logique (&&)
+  bool avoirBourse = age && moyenne;
+  print(avoirBourse);
+
+  // OU logique (||)
+  bool etreAdmisDansEcole = age || moyenne;
+  print(etreAdmisDansEcole);
+
+  // NON logique (!)
+  bool reussi = true;
+  bool echec = !reussi;
+  print(reussi);
+  print(echec);
 }
