@@ -1,30 +1,12 @@
 void main() {
   //Opérateurs
+  var nombreVie = 10;
 
-  var a = 10;
-  var b = 5;
-  print(a == b);
-  print(a != b);
+  var balle = nombreVie - 1;
+  var bombe = nombreVie - 2;
 
-  //les opérateurs logiques
-  //ET logique : && (touche 1)
-  //OU logique : || (AltGr + touche 6)
-  //NON logique : !
-
-  bool age = false;
-  bool moyenne = false;
-
-  //ET logique (&&)
-  bool avoirBourse = age && moyenne;
-  print(avoirBourse);
-
-  // OU logique (||)
-  bool etreAdmisDansEcole = age || moyenne;
-  print(etreAdmisDansEcole);
-
-  // NON logique (!)
-  bool reussi = true;
-  bool echec = !reussi;
-  print(reussi);
-  print(echec);
+  nombreVie -= 1; //Si c'est une balle (nombreVie = nombreVie - 1)
+  nombreVie -= 2; //Si c'est une bombe (nombreVie = nombreVie - 2)
+  nombreVie +=
+      1; //Si c'est une potion de vie gagnée (nombreVie = nombreVie + 1)
 }
