@@ -1,13 +1,21 @@
 void main() {
   //Opérateurs
 
-  // la division entière
-  var nombre1 = 15;
-  var nombre2 = 4;
+  // Le modulo (%): Il retourne le reste de la division euclidienne
+  var nombre1 = 23;
+  var nombre2 = 3;
 
-  var divisionDecimale = nombre1 / nombre2;
-  var divisionEntiere = nombre1 ~/ nombre2; // ~ : tilde
+  var modulo = nombre1 % nombre2;
+  print(modulo);
 
-  print(divisionDecimale);
-  print(divisionEntiere);
+  void parite(int nombre) {
+    if (nombre % 2 == 0) {
+      print("Le nombre $nombre est pair");
+    } else {
+      print("Le nombre $nombre est impair");
+    }
+  }
+
+  parite(20);
+  parite(25);
 }
