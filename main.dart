@@ -12,4 +12,25 @@ void main() {
   type_variable : int (entier), double (décimal), String (texte), bool (booléen : true or false), List (liste), Map(dictionnaire), Set(liste ordonnée), etc.
   
   */
+
+  // Déclaration d'une variable nom et age
+  String? nom;
+  int age = 20;
+  const pi = 3.14;
+
+  //changement de la valeur de la variable nom
+  nom = "John Doe";
+  age = 24;
+
+  print(nom);
+  print(age);
+  print(pi);
+
+  void salutation(String nom_a_saluer) {
+    nom = "Dimas";
+    print("Bonjour, $nom_a_saluer!");
+    nom_a_saluer = "Dimas";
+  }
+
+  salutation("Alice");
 }
