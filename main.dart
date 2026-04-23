@@ -1,36 +1,13 @@
-// La fonction principale d'excécution de l'application
 void main() {
-  //Corps de la fonction
+  //Opérateurs
 
-  /*
-  DÉCLARATION DES VARIABLES
+  // la division entière
+  var nombre1 = 15;
+  var nombre2 = 4;
 
-  type_varible nom_variable = valeur_initiale_variable;
+  var divisionDecimale = nombre1 / nombre2;
+  var divisionEntiere = nombre1 ~/ nombre2; // ~ : tilde
 
-  Ex : int age = 20;
-
-  type_variable : int (entier), double (décimal), String (texte), bool (booléen : true or false), List (liste), Map(dictionnaire), Set(liste ordonnée), etc.
-  
-  */
-
-  // Déclaration d'une variable nom et age
-  String? nom;
-  int age = 20;
-  const pi = 3.14;
-
-  //changement de la valeur de la variable nom
-  nom = "John Doe";
-  age = 24;
-
-  print(nom);
-  print(age);
-  print(pi);
-
-  void salutation(String nom_a_saluer) {
-    nom = "Dimas";
-    print("Bonjour, $nom_a_saluer!");
-    nom_a_saluer = "Dimas";
-  }
-
-  salutation("Alice");
+  print(divisionDecimale);
+  print(divisionEntiere);
 }
