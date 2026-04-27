@@ -1,27 +1,50 @@
 void main() {
-  // List : accès aux éléments
+  // Map : Key-Value Pair
 
-  List<String> fruits = ['Pomme', 'Banane', 'Orange'];
+  //type_variable nom_variable = valeur_initiale;
+  List capitales_pays = ["Porto-Novo", "Lome"];
+  capitales_pays.add("Paris");
 
-  print(fruits[2]); // Affiche 'Orange'
-  print(fruits[0]); // Affiche 'Pomme'
+  Map capitales = {'Benin': "Porto-Novo", 'Togo': "Lome"};
 
-  fruits.add('Lemon'); // Ajoute 'Lemon' à la fin de la liste
-  fruits.add('Kiwi'); // Ajoute 'Kiwi' à la fin de la liste
+  // Map<String, int> : clé de type String et valeur de type int
+  Map<String, int> ages = {"Alice": 30, 'Bob': 25, 'Charlie': 35};
 
-  fruits.addAll([
-    "Papaya",
-    'Banana',
-    "Tomato",
-  ]); // Ajoute tous les éléments d'un iterable à la fin de la liste
-  print(fruits); // Affiche ['Pomme', 'Banane', 'Orange', 'Lemon', 'Kiwi']
+  print(capitales_pays[0]);
+  print(capitales["Nigeria"]);
+  print(ages["Alice"]);
 
-  fruits[4] = 'Melon'; // Modifie l'élément à l'index 4
-  print(fruits); // Affiche ['Pomme', 'Banane', 'Orange', 'Lemon', 'Melon']
+  // Map<String, String> : clé de type String et valeur de type String
+  Map<String, String> traductions = {
+    'Hello': 'Salut',
+    'Goodbye': 'Au revoir',
+    'Thank you': 'Merci',
+    'Good morning': 'Bonjour',
+  };
 
-  fruits[fruits.indexOf("Papaya")] =
-      "Apple"; // Retourne l'index de la première occurrence de 'Papaya'
+  //Ajout de nouvelles valeurs
+  traductions['Welcome'] = 'Bienvenue';
+
+  print(traductions['Hello']);
+  print(traductions['Goodbye']);
+  print(traductions['Welcome']);
+  print(traductions);
+
+  print(traductions.length); // Affiche les clés du Map
+
+  // Supprime la clé 'Goodbye' et sa valeur associée
+  traductions.remove('Goodbye');
+  print(traductions);
+
+  Map<String, String> mini_tradctions = {
+    'Yes': 'Oui',
+    'No': 'Non',
+    'A': "Un",
+    'For': "Pour",
+  };
+
+  traductions.addAll(mini_tradctions);
   print(
-    fruits,
-  ); // Affiche ['Pomme', 'Banane', 'Orange', 'Lemon', 'Melon', 'Apple', 'Banana', 'Tomato']
+    traductions.containsKey("Good morning"),
+  ); // Vérifie si la clé "Good morning" existe dans le Map
 }
