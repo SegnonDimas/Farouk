@@ -1,22 +1,47 @@
 void main() {
-  // String : les méthodes
-  String texte1 = "Je suis un développeur Flutter";
-  String texte2 = "J'aime le langage Java";
-  String texte3 = "Codeur Plus est un Génie du développement Mobile";
-  int tailleDeTexte1 = texte1.length;
-  String texte1_en_majuscule = texte1.toUpperCase(); // longueur de la chaîne
-  String emailAdress = "   codeurplus10@gmail.com  ";
-  // Les méthodes
-  print(tailleDeTexte1); // affichage de la longueur de la chaîne
-  print(texte1.toUpperCase()); // affichage en majuscules
-  print(texte3.toLowerCase()); // affichage en minuscules
+  // List : méthodes
+  // type_variable nom_variable = valeur_initiale;
+  // List nom_liste = [element1, element2, element3, ...];
+  // List<String> maListe = ['Dimas', 'John', 'Alice']; // Liste de chaînes de caractères
 
-  print(texte2.contains("Dart")); // vérifie si la chaîne contient "Dart"
+  List maListe = [
+    'Dimas',
+    20,
+    true,
+    [2, 3.5, "Le doux"],
+  ]; // Liste de dynamiques
+  print(maListe);
 
-  print(texte2.replaceAll("Java", "Dart"));
+  List<dynamic> maListe1 = ['Dimas', 20, true]; // Liste de dynamiques
+  print(maListe1);
 
-  print(texte3.split(" "));
+  //liste de String
+  List<String> maListe2 = ['Dimas', 'John', 'Alice'];
+  print(maListe2.length);
 
-  print(emailAdress);
-  print(emailAdress.trim()); // supprime les espaces avant et après
+  //liste de double
+  List<double> moyennes = [15.5, 12.0, 18.0, 17.0];
+  print(moyennes);
+
+  // Ajouter un élément à la liste
+  moyennes.add(14.5);
+  print(moyennes);
+
+  // Trouver l'index d'un élément
+  print(moyennes.indexOf(17.0));
+
+  // Supprimer un élément de la liste
+  moyennes.removeAt(1);
+  print(moyennes);
+
+  // Trier la liste
+  moyennes.sort();
+  print(moyennes);
+
+  // Inverser l'ordre de la liste
+  print(moyennes.reversed);
+
+  // Ajouter tous les éléments d'une autre liste
+  maListe.addAll(maListe2);
+  print(maListe);
 }
