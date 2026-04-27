@@ -1,47 +1,27 @@
 void main() {
-  // List : méthodes
-  // type_variable nom_variable = valeur_initiale;
-  // List nom_liste = [element1, element2, element3, ...];
-  // List<String> maListe = ['Dimas', 'John', 'Alice']; // Liste de chaînes de caractères
+  // List : accès aux éléments
 
-  List maListe = [
-    'Dimas',
-    20,
-    true,
-    [2, 3.5, "Le doux"],
-  ]; // Liste de dynamiques
-  print(maListe);
+  List<String> fruits = ['Pomme', 'Banane', 'Orange'];
 
-  List<dynamic> maListe1 = ['Dimas', 20, true]; // Liste de dynamiques
-  print(maListe1);
+  print(fruits[2]); // Affiche 'Orange'
+  print(fruits[0]); // Affiche 'Pomme'
 
-  //liste de String
-  List<String> maListe2 = ['Dimas', 'John', 'Alice'];
-  print(maListe2.length);
+  fruits.add('Lemon'); // Ajoute 'Lemon' à la fin de la liste
+  fruits.add('Kiwi'); // Ajoute 'Kiwi' à la fin de la liste
 
-  //liste de double
-  List<double> moyennes = [15.5, 12.0, 18.0, 17.0];
-  print(moyennes);
+  fruits.addAll([
+    "Papaya",
+    'Banana',
+    "Tomato",
+  ]); // Ajoute tous les éléments d'un iterable à la fin de la liste
+  print(fruits); // Affiche ['Pomme', 'Banane', 'Orange', 'Lemon', 'Kiwi']
 
-  // Ajouter un élément à la liste
-  moyennes.add(14.5);
-  print(moyennes);
+  fruits[4] = 'Melon'; // Modifie l'élément à l'index 4
+  print(fruits); // Affiche ['Pomme', 'Banane', 'Orange', 'Lemon', 'Melon']
 
-  // Trouver l'index d'un élément
-  print(moyennes.indexOf(17.0));
-
-  // Supprimer un élément de la liste
-  moyennes.removeAt(1);
-  print(moyennes);
-
-  // Trier la liste
-  moyennes.sort();
-  print(moyennes);
-
-  // Inverser l'ordre de la liste
-  print(moyennes.reversed);
-
-  // Ajouter tous les éléments d'une autre liste
-  maListe.addAll(maListe2);
-  print(maListe);
+  fruits[fruits.indexOf("Papaya")] =
+      "Apple"; // Retourne l'index de la première occurrence de 'Papaya'
+  print(
+    fruits,
+  ); // Affiche ['Pomme', 'Banane', 'Orange', 'Lemon', 'Melon', 'Apple', 'Banana', 'Tomato']
 }
