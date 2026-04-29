@@ -1,14 +1,21 @@
 import 'dart:io';
 
 void main() {
-  // Structures de contrôle : Boucles => boucle while
+  // Structures de contrôle : Boucles => boucle for
 
+
+// boucle while
   int nombre = 3;
 
-  do {
-    print("Nombre inférieur à 2");
+  print("TABLE DE MULTIPLICATION DE 7");
+  while (nombre <= 12) {
+    print("7 x $nombre = ${7 * nombre}");
     nombre++;
-  } while (nombre < 2);
+  }
 
-  print('Fin de la boucle');
+// boucle for
+  print("\nTABLE DE MULTIPLICATION DE 8");
+  for (int nombre = 3; nombre <= 12; nombre++) {
+    print("8 x $nombre = ${8 * nombre}");
+  }
 }
