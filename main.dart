@@ -1,40 +1,30 @@
-//Type : Enum
-
-// type_variable nom_variable = valeur_initiale;
-/*
-    Pour les enum, la syntaxe est la suivante :
-    enum Nom_variable {valeur1, valeur2, ...}
-*/
-
-enum Jours {
-  Lundi,
-  Mardi,
-  Mercredi,
-  Jeudi,
-  Vendredi,
-  Samedi,
-  Dimanche;
-
-  bool get isWeekend => this == Jours.Samedi || this == Jours.Dimanche;
-}
-
-enum video_status { is_playing, is_paused, is_finished }
-
-enum user_status { is_online, is_offline }
-
-enum ligth_status { is_on, is_off }
-
-// Fonction main : fonction principale
 void main() {
-  // Déclaration d'une variable de type Jours
+  // Structures de contrôle : if/else
 
-  Jours premier_jour_semaine = Jours.Lundi;
+  String jour = "Mardi";
 
-  Jours autre_jour = Jours.Samedi;
+  if (jour == "Lundi") {
+    print("Début de la semaine");
+  } else if (jour == "Vendredi") {
+    print("Fin de la semaine");
+  } else if (jour == "Samedi" || jour == "Dimanche") {
+    print("Le week-end");
+  } else {
+    print("Jour de travail");
+  }
 
-  Jours jour_anniversaire_jean = Jours.Mercredi;
-  Jours jour_anniversaire_marie = Jours.Dimanche;
-
-  print(jour_anniversaire_jean.isWeekend); // Affiche false
-  print(jour_anniversaire_marie.isWeekend); // Affiche true
+  switch (jour) {
+    case "Lundi":
+      print("Début de la semaine");
+      break;
+    case "Vendredi":
+      print("Fin de la semaine");
+      break;
+    case "Samedi":
+    case "Dimanche":
+      print("Le week-end");
+      break;
+    default:
+      print("Jour de travail");
+  }
 }
