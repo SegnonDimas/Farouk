@@ -1,30 +1,15 @@
 void main() {
-  // Structures de contrôle : if/else
+  // Structures de contrôle : if/else - forme ternaire
 
-  String jour = "Mardi";
+  int age = 16;
 
-  if (jour == "Lundi") {
-    print("Début de la semaine");
-  } else if (jour == "Vendredi") {
-    print("Fin de la semaine");
-  } else if (jour == "Samedi" || jour == "Dimanche") {
-    print("Le week-end");
+  // forme classique
+  if (age >= 18) {
+    print("Vous êtes majeur.");
   } else {
-    print("Jour de travail");
+    print("Vous êtes mineur.");
   }
 
-  switch (jour) {
-    case "Lundi":
-      print("Début de la semaine");
-      break;
-    case "Vendredi":
-      print("Fin de la semaine");
-      break;
-    case "Samedi":
-    case "Dimanche":
-      print("Le week-end");
-      break;
-    default:
-      print("Jour de travail");
-  }
+  // forme ternaire
+  age >= 18 ? print("Vous êtes majeur.") : print("Vous êtes mineur.");
 }
