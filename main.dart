@@ -1,30 +1,23 @@
-import 'dart:io';
-
 void main() {
-  // Structures de contrôle : Boucles => boucle for-in
+  //Programme calculant la somme des nombre de 1 à 100
+  /* 
+  somme = 1+2+3+....+99+100 : 
+  0+1 = 1
+  1+2 = 3
+  3+3 = 6
+  6+4 = 10
+  10+5= 15
+  15+6= 21
+  21+7= 28
+  ...
+  ..
+  .
+  */
+  int somme = 0;
 
-  List<String> fruits = ['pomme', 'banane', 'orange'];
-
-  List users = ["Dimas", "Farouk", "Divine", "Fabrice"];
-
-  print("\nBoucle for classique :");
-  for (int index = 0; index < fruits.length; index++) {
-    print(fruits[index]);
+  for (int nombre = 1; nombre <= 1000; nombre = nombre + 1) {
+    somme = somme + nombre;
   }
 
-  print("\nBoucle for-in :");
-  for (String fruit in fruits) {
-    print(fruit);
-  }
-
-  // boucle forEach
-  print("\nBoucle forEach :");
-  fruits.forEach((fruit) {
-    print(fruit);
-  });
-
-  print("\aBouche forEach avec les utilisateurs :");
-  users.forEach((user) {
-    print(user);
-  });
+  print(somme);
 }
